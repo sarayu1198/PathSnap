@@ -18,7 +18,7 @@ import sys
 import time
 
 import numpy as np
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -44,6 +44,11 @@ log.info("serving partition '%s' from %s", PARTITION, DATA)
 
 class PredictRequest(BaseModel):
     trip_id: str
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon():
+    return Response(status_code=204)  # browsers request this automatically; avoid 404 noise in the log
 
 
 @app.get("/health")
