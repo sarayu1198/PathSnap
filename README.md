@@ -68,6 +68,32 @@ python scripts/make_plots.py
 
 Every random seed is fixed at 42. Only `train` (CV, tuning) and `student_test` (comparison) are used. The evaluator partition is never read by these scripts.
 
+## Results
+
+All numbers come from the CSVs in `results/`.
+
+**Model comparison** (`results/model_comparison.csv`). CV is 5-fold GroupKFold on the 80 train trips; test is the 10 student-test trips. Top-1 is the observation-level accuracy of the highest-scoring candidate.
+
+| Model | Family | CV Macro F1 | CV Top-1 | Test Top-1 | Test Macro F1 | Test log loss |
+|---|---|---|---|---|---|---|
+| LightGBM | Boosting | 0.942 | 0.903 | 0.898 | 0.940 | 0.069 |
+| RandomForest | Bagging | 0.942 | 0.902 | 0.895 | 0.939 | 0.069 |
+| HistGradientBoosting | Boosting | 0.941 | 0.900 | 0.894 | 0.938 | 0.074 |
+| LogisticRegression | Linear | 0.935 | 0.898 | 0.893 | 0.930 | 0.086 |
+| MLP | Neural net | 0.934 | 0.898 | 0.889 | 0.931 | 0.078 |
+| DecisionTree | Tree | 0.934 | 0.894 | 0.888 | 0.930 | 0.084 |
+| KNN | Instance-based | 0.931 | 0.890 | 0.880 | 0.926 | 0.131 |
+| GaussianNB | Probabilistic | 0.913 | 0.885 | 0.879 | 0.907 | 0.429 |
+
+**Bayesian optimisation of LightGBM** (`results/tuned_vs_untuned.csv`): 30 Optuna TPE trials. CV Top-1 went from 0.9027 to 0.9046 and test Top-1 from 0.8982 to 0.9025.
+
+**HMM** (`results/hmm_student_test.csv`, fix-weighted over 10 trips):
+
+| | Top-1 | Route continuity | Route F1 |
+|---|---|---|---|
+| Tuned LightGBM only | 0.9025 | 0.9456 | 0.8077 |
+| Tuned LightGBM + HMM | 0.9499 | 0.9820 | 0.9709 |
+
 ## Running the demo
 
 **Laptop 1 (API):** copy the evaluator trips into `<PATHSNAP_DATA>/evaluator_test/`, then:

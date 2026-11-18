@@ -1,0 +1,41 @@
+2026-11-18 11:00:13,465 | INFO | model loaded: LGBMClassifier | HMM params: {'w_e': 0.5, 'beta': 3.0, 'uturn_pen': 15.0, 'back_pen': 0.0, 'back_tol': 8.0, 'gap_s': 60.0}
+2026-11-18 11:00:13,465 | INFO | serving partition 'student_test' from C:\Users\Prithvi\Prithvi\PES\Sem 5\ML Hackathon\Student folder
+INFO:     127.0.0.1:51463 - "GET /health HTTP/1.1" 200 OK
+2026-11-18 11:00:19,974 | INFO | GET /trips -> 10 trips
+INFO:     127.0.0.1:51471 - "GET /trips HTTP/1.1" 200 OK
+2026-11-18 11:00:22,019 | INFO | POST /predict trip=00000000 : running pipeline
+2026-11-18 11:00:22,561 | INFO | trip=00000000 fixes=2503 candidates=11598 breaks=2 time=0.47s | top1(HMM)=0.9728 top1(clf)=0.9513 route_f1=0.9572
+INFO:     127.0.0.1:51474 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 11:00:32,407 | INFO | GET /trips -> 10 trips
+INFO:     127.0.0.1:51484 - "GET /trips HTTP/1.1" 200 OK
+2026-11-18 11:00:34,459 | INFO | POST /predict trip=00000000 : running pipeline
+2026-11-18 11:00:34,990 | INFO | trip=00000000 fixes=2503 candidates=11598 breaks=2 time=0.46s | top1(HMM)=0.9728 top1(clf)=0.9513 route_f1=0.9572
+INFO:     127.0.0.1:51487 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 11:00:37,047 | INFO | POST /predict trip=00000007 : running pipeline
+2026-11-18 11:00:37,318 | INFO | trip=00000007 fixes=1354 candidates=5551 breaks=0 time=0.24s | top1(HMM)=1.0000 top1(clf)=0.9653 route_f1=0.9918
+INFO:     127.0.0.1:51497 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 11:00:39,364 | INFO | POST /predict trip=00000009 : running pipeline
+2026-11-18 11:00:39,752 | INFO | trip=00000009 fixes=1049 candidates=9880 breaks=0 time=0.35s | top1(HMM)=0.9209 top1(clf)=0.8875 route_f1=0.9604
+INFO:     127.0.0.1:51500 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 11:00:41,809 | INFO | POST /predict trip=00000040 : running pipeline
+2026-11-18 11:00:42,439 | INFO | trip=00000040 fixes=2995 candidates=15098 breaks=0 time=0.54s | top1(HMM)=0.9846 top1(clf)=0.9386 route_f1=0.9952
+INFO:     127.0.0.1:51505 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 11:00:44,505 | INFO | POST /predict trip=00000052 : running pipeline
+2026-11-18 11:00:44,615 | INFO | trip=00000052 fixes=262 candidates=2162 breaks=0 time=0.10s | top1(HMM)=1.0000 top1(clf)=0.9733 route_f1=0.9894
+INFO:     127.0.0.1:51508 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 11:00:46,670 | INFO | POST /predict trip=00000056 : running pipeline
+2026-11-18 11:00:47,856 | INFO | trip=00000056 fixes=3958 candidates=33365 breaks=1 time=0.99s | top1(HMM)=0.9718 top1(clf)=0.9267 route_f1=0.9633
+INFO:     127.0.0.1:51510 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 11:00:49,945 | INFO | POST /predict trip=00000065 : running pipeline
+2026-11-18 11:00:50,239 | INFO | trip=00000065 fixes=768 candidates=7118 breaks=1 time=0.26s | top1(HMM)=0.9492 top1(clf)=0.9167 route_f1=0.9864
+INFO:     127.0.0.1:51512 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 11:00:52,294 | INFO | POST /predict trip=00000076 : running pipeline
+2026-11-18 11:00:52,957 | INFO | trip=00000076 fixes=1486 candidates=14080 breaks=0 time=0.59s | top1(HMM)=0.9764 top1(clf)=0.9394 route_f1=0.9499
+INFO:     127.0.0.1:51515 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 11:00:55,004 | INFO | POST /predict trip=00000077 : running pipeline
+2026-11-18 11:00:55,958 | INFO | trip=00000077 fixes=3911 candidates=34397 breaks=0 time=0.84s | top1(HMM)=0.8637 top1(clf)=0.7750 route_f1=0.9640
+INFO:     127.0.0.1:51518 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 11:00:58,028 | INFO | POST /predict trip=00000091 : running pipeline
+2026-11-18 11:00:58,350 | INFO | trip=00000091 fixes=874 candidates=7701 breaks=0 time=0.29s | top1(HMM)=0.9497 top1(clf)=0.9245 route_f1=0.9893
+INFO:     127.0.0.1:51522 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51524 - "POST /predict HTTP/1.1" 404 Not Found
