@@ -1,0 +1,9 @@
+{'model': 'LogisticRegression', 'train_macro_f1': 0.9354556850526067, 'train_top1': 0.8986017573895151, 'train_log_loss': 0.08933985390970946}
+{'model': 'GaussianNB', 'train_macro_f1': 0.9143545617756201, 'train_top1': 0.8853214229778409, 'train_log_loss': 0.41059338275837376}
+{'model': 'KNN', 'train_macro_f1': 0.9435755129793035, 'train_top1': 0.9165429005028056, 'train_log_loss': 0.09461968120974275}
+{'model': 'DecisionTree', 'train_macro_f1': 0.9501052066774043, 'train_top1': 0.9202531850659696, 'train_log_loss': 0.06262368919037148}
+{'model': 'RandomForest', 'train_macro_f1': 0.9591039463186286, 'train_top1': 0.929974454663779, 'train_log_loss': 0.05249302120082666}
+{'model': 'HistGradientBoosting', 'train_macro_f1': 0.9513609617892246, 'train_top1': 0.9178768747198384, 'train_log_loss': 0.06402888238726819}
+{'model': 'LightGBM', 'train_macro_f1': 0.9675797878916353, 'train_top1': 0.9487149021662229, 'train_log_loss': 0.042875212892711}
+{'model': 'MLP', 'train_macro_f1': 0.9508600394008576, 'train_top1': 0.9205070182165791, 'train_log_loss': 0.06285472876617365}
+{'model': 'LightGBM_tuned', 'train_macro_f1': 0.993734540237406, 'train_top1': 0.9879888313413732, 'train_log_loss': 0.015125510526494393}
