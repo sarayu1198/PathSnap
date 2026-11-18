@@ -47,7 +47,7 @@ From `results/model_comparison.csv`. CV is 5-fold GroupKFold on the 80 train tri
 | LogisticRegression | Linear | 0.935 | 0.898 | 0.893 | 0.930 | 0.086 | 5 s |
 | MLP | Neural net | 0.934 | 0.898 | 0.889 | 0.931 | 0.078 | 68 s |
 | DecisionTree | Tree | 0.934 | 0.894 | 0.888 | 0.930 | 0.084 | 50 s |
-| KNN | Instance-based | 0.931 | 0.890 | 0.880 | 0.926 | 0.131 | <1 s |
+| KNN | Instance-based | 0.931 | 0.890 | 0.880 | 0.926 | 0.120 | <1 s |
 | GaussianNB | Probabilistic | 0.913 | 0.885 | 0.879 | 0.907 | 0.429 | <1 s |
 
 LightGBM was selected because it has the highest CV Top-1 accuracy, the metric closest to the actual task, and the best student-test Top-1 and Macro F1. It's also small and fast. Random Forest is statistically tied, but it trains about 4× slower and its saved model is 116 MB.
@@ -133,6 +133,8 @@ results/                  experiment outputs: CSV, JSON, logs
 figures/                  plots used in the report
 maps/                     folium maps (EDA + predictions for all student-test trips)
 docs/DELIVERABLES_CHECKLIST.md   requirement -> file mapping
+report/OUTLINE.md         report plan: what each section needs and where the evidence is
+report/screenshots/       folium, UI and API screenshots for the PDF
 ```
 
 ## Setup
@@ -176,6 +178,7 @@ Run from the repo root, in this order. Seeds are fixed at 42. Only `train` and `
 | 7. Figures | `python scripts/make_plots.py` | `figures/*.png` | 1 min |
 | 8. Training-set metrics (over/underfitting) | `python scripts/train_fit_eval.py` | `results/train_fit_metrics.csv` | 3 min |
 | 9. Train / CV / test summary tables | `python scripts/summary_tables.py` | `results/summary_train_cv_test.{csv,md}` | <1 s |
+| 10. Report tables | `python scripts/report_tables.py` | `results/report_tables.md` | <1 s |
 
 The large intermediate tables (`artifacts/features_*.pkl`, `oof_*.pkl`, `test_pred_*.pkl`) and `RandomForest.joblib` (116 MB, over GitHub's file limit) are git-ignored. Steps 2–5 regenerate them.
 
@@ -210,6 +213,8 @@ The trained model and HMM parameters are committed, so the demo needs no trainin
    - matched points (orange, toggle in the layer control)
 
    Next to the map it shows Top-1 accuracy (HMM and classifier-only), continuity, route precision, recall and F1, and the timing.
+
+   Adding `&trip=<id>` to the URL runs that trip as soon as the UI connects.
 
 Both laptops must be on the same network. Test it once before the evaluation.
 

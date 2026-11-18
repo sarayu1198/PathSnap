@@ -2,7 +2,7 @@
 
 Each requirement from the hackathon documents, and where it lives in this repo. Items marked **TEAM** can only be done by the team (screenshots on the demo laptops, written analysis, final PDF).
 
-## Deliverable 1 – GitHub repository
+## Deliverable 1: GitHub repository
 
 | Required component | Where |
 |---|---|
@@ -21,7 +21,9 @@ Each requirement from the hackathon documents, and where it lives in this repo. 
 | README with install / run / deploy | `README.md` |
 | No secrets committed | nothing secret in the repo |
 
-## Deliverable 2 – Technical report (PDF) — TEAM writes it; evidence below
+## Deliverable 2: technical report (PDF), written by the TEAM; evidence below
+
+Section-by-section plan: `report/OUTLINE.md`. Every table the report needs, with fixed rounding: `results/report_tables.md` (rebuild with `python scripts/report_tables.py`). Screenshots go in `report/screenshots/`.
 
 | Report section | Evidence in repo |
 |---|---|
@@ -29,9 +31,9 @@ Each requirement from the hackathon documents, and where it lives in this repo. 
 | Missing-value analysis | `eda_inventory.csv` columns `n_nan`, `n_nonmonotonic_t` (all zero), gap/jump columns |
 | GPS trajectory plots | `figures/eda_trajectory_*.png`, `figures/eda_overview.png` |
 | Road-network visualisation | `figures/eda_trajectory_*.png`, `maps/eda_*.html`; connectivity columns in `eda_inventory.csv` |
-| Folium map (≥1) | `maps/eda_*.html`, `maps/pred_student_test_*.html` |
+| Folium map (≥1) | `maps/eda_*.html`, `maps/pred_student_test_*.html`; screenshot to `report/screenshots/eda_map_train_00000001.png` (done) |
 | Partition used for each analysis | stated in every figure title / file name |
-| 3.1 Comparison table (CV macro-F1, Top-1, continuity, test macro-F1, log loss, inference time) | `results/model_comparison.csv` |
+| 3.1 Comparison table (CV macro-F1, Top-1, continuity, test macro-F1, log loss, inference time) | `results/model_comparison.csv`; formatted in `results/report_tables.md` |
 | 3.2 Per-model answers (hyperparameters, loss, test metrics, over/underfitting) | configs in `results/experiment_log.json`; fold spread in `results/cv_folds.csv`; train vs CV vs test in `results/summary_train_cv_test.md` (train−CV gap = over/underfitting evidence) |
 | 3.3 CV macro-F1 plot | `figures/cv_macro_f1.png` |
 | Student-test Top-1 + macro-F1 plot | `figures/test_top1_macro_f1.png` |
@@ -41,8 +43,8 @@ Each requirement from the hackathon documents, and where it lives in this repo. 
 | Plots justifying selection | `figures/cv_top1.png`, `figures/accuracy_vs_speed.png` |
 | 4 Bayesian optimisation (params, ranges, objective, trials, best, tuned vs untuned) | `scripts/bayes_opt.py` (search space), `results/optuna_trials.csv`, `artifacts/best_params.json`, `results/tuned_vs_untuned.csv`, `figures/optuna_history.png`, `figures/tuned_vs_untuned.png` |
 | 5 HMM (states, emission, transition, gaps, disconnected segments, improvement) | docstring of `pathsnap/hmm.py`, `results/hmm_tuning.csv`, `results/hmm_student_test.csv`, `figures/hmm_vs_classifier.png`, `figures/hmm_tuning.png` |
-| 6 Folium: GPS, network, reference, predicted, legend, layer control | `maps/pred_student_test_*.html` (screenshot one for the PDF — TEAM) |
-| 7 UI + API screenshots | **TEAM**: screenshot UI on laptop 2 and the uvicorn console on laptop 1 |
+| 6 Folium: GPS, network, reference, predicted, legend, layer control | `maps/pred_student_test_*.html`; screenshot to `report/screenshots/pred_map_student_test_00000040.png` (done) |
+| 7 UI + API screenshots | UI to `report/screenshots/ui_student_test_00000040.png`, uvicorn console to `report/screenshots/api_console.png` (both done) |
 
 ## Evaluation-day rules
 
