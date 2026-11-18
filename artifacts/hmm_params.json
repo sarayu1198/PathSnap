@@ -1,7 +1,7 @@
 {
-  "w_e": 0.5,
-  "beta": 3.0,
-  "uturn_pen": 15.0,
+  "w_e": 0.1,
+  "beta": 5.0,
+  "uturn_pen": 30.0,
   "back_pen": 0.0,
   "back_tol": 8.0,
   "gap_s": 60.0

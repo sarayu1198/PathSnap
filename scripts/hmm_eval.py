@@ -58,7 +58,7 @@ def main(model):
     tune = prepare("train", oof, tune_trips)
     print(f"lattices for {len(tune)} train trips built in {time.time() - t0:.0f}s", flush=True)
 
-    grid = dict(w_e=[0.5, 1.0, 2.0], beta=[3.0, 8.0, 20.0], uturn_pen=[2.0, 6.0, 15.0, 30.0], back_pen=[0.0, 2.0])
+    grid = dict(w_e=[0.05, 0.1, 0.15, 0.2, 0.35, 0.5, 1.0, 2.0], beta=[1.5, 2.0, 3.0, 5.0, 8.0, 20.0], uturn_pen=[15.0, 30.0], back_pen=[0.0, 2.0])
     rows = []
     base_c = sum(score(d, classifier_only(d["lat"]))[0] for d in tune.values())
     base_n = sum(d["lab"].sum() for d in tune.values())

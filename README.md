@@ -92,7 +92,7 @@ All numbers come from the CSVs in `results/`.
 | | Top-1 | Route continuity | Route F1 |
 |---|---|---|---|
 | Tuned LightGBM only | 0.9025 | 0.9456 | 0.8077 |
-| Tuned LightGBM + HMM | 0.9499 | 0.9820 | 0.9709 |
+| Tuned LightGBM + HMM | 0.9518 | 0.9815 | 0.9692 |
 
 ## Running the demo
 
