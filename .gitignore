@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+# large intermediate tables (regenerate with scripts/build_dataset.py, scripts/train_models.py)
+artifacts/features_*.pkl
+artifacts/oof_*.pkl
+artifacts/test_pred_*.pkl
+# raw data is distributed separately (see README)
+data/
