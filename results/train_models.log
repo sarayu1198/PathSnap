@@ -1,0 +1,56 @@
+=== LogisticRegression
+  fold 0: top1=0.8833 macroF1=0.9245
+  fold 1: top1=0.8940 macroF1=0.9307
+  fold 2: top1=0.9362 macroF1=0.9553
+  fold 3: top1=0.9034 macroF1=0.9403
+  fold 4: top1=0.8747 macroF1=0.9220
+{'model': 'LogisticRegression', 'family': 'Linear', 'config': 'StandardScaler, L2, C=1.0, lbfgs', 'cv_macro_f1': np.float64(0.9346), 'cv_macro_f1_std': np.float64(0.0136), 'cv_top1': np.float64(0.8983), 'cv_top1_std': np.float64(0.0238), 'cv_log_loss': np.float64(0.0905), 'cv_continuity': np.float64(0.9289), 'test_accuracy': 0.9669, 'test_precision': 0.8708, 'test_recall': 0.8875, 'test_f1': 0.8791, 'test_macro_f1': 0.9299, 'test_log_loss': 0.0856, 'test_top1': 0.8926, 'test_continuity': 0.9398, 'train_rows': 1290880, 'train_time_s': 4.8131, 'inference_time_s': 0.0336, 'inference_ms_per_obs': 0.0018}
+=== GaussianNB
+  fold 0: top1=0.8718 macroF1=0.9071
+  fold 1: top1=0.8822 macroF1=0.9122
+  fold 2: top1=0.9231 macroF1=0.9308
+  fold 3: top1=0.8904 macroF1=0.9104
+  fold 4: top1=0.8570 macroF1=0.9044
+{'model': 'GaussianNB', 'family': 'Probabilistic', 'config': 'default var_smoothing=1e-9', 'cv_macro_f1': np.float64(0.913), 'cv_macro_f1_std': np.float64(0.0104), 'cv_top1': np.float64(0.8849), 'cv_top1_std': np.float64(0.0247), 'cv_log_loss': np.float64(0.4207), 'cv_continuity': np.float64(0.9119), 'test_accuracy': 0.954, 'test_precision': 0.7924, 'test_recall': 0.8951, 'test_f1': 0.8406, 'test_macro_f1': 0.9069, 'test_log_loss': 0.4293, 'test_top1': 0.8786, 'test_continuity': 0.9244, 'train_rows': 1290880, 'train_time_s': 0.5081, 'inference_time_s': 0.0655, 'inference_ms_per_obs': 0.0034}
+=== KNN
+  fold 0: top1=0.8746 macroF1=0.9204
+  fold 1: top1=0.8796 macroF1=0.9274
+  fold 2: top1=0.9320 macroF1=0.9538
+  fold 3: top1=0.8981 macroF1=0.9364
+  fold 4: top1=0.8633 macroF1=0.9150
+{'model': 'KNN', 'family': 'Instance-based', 'config': 'StandardScaler, k=25, distance-weighted, 150k-row subsample', 'cv_macro_f1': np.float64(0.9306), 'cv_macro_f1_std': np.float64(0.0153), 'cv_top1': np.float64(0.8895), 'cv_top1_std': np.float64(0.0269), 'cv_log_loss': np.float64(0.1314), 'cv_continuity': np.float64(0.9153), 'test_accuracy': 0.965, 'test_precision': 0.8678, 'test_recall': 0.875, 'test_f1': 0.8714, 'test_macro_f1': 0.9256, 'test_log_loss': 0.1197, 'test_top1': 0.8801, 'test_continuity': 0.9278, 'train_rows': 150000, 'train_time_s': 0.0842, 'inference_time_s': 12.42, 'inference_ms_per_obs': 0.6482}
+=== DecisionTree
+  fold 0: top1=0.8793 macroF1=0.9224
+  fold 1: top1=0.8987 macroF1=0.9361
+  fold 2: top1=0.9336 macroF1=0.9570
+  fold 3: top1=0.8994 macroF1=0.9391
+  fold 4: top1=0.8606 macroF1=0.9169
+{'model': 'DecisionTree', 'family': 'Tree-based', 'config': 'max_depth=12, min_samples_leaf=50', 'cv_macro_f1': np.float64(0.9343), 'cv_macro_f1_std': np.float64(0.0157), 'cv_top1': np.float64(0.8943), 'cv_top1_std': np.float64(0.0272), 'cv_log_loss': np.float64(0.0954), 'cv_continuity': np.float64(0.9192), 'test_accuracy': 0.9675, 'test_precision': 0.884, 'test_recall': 0.8753, 'test_f1': 0.8796, 'test_macro_f1': 0.9304, 'test_log_loss': 0.0842, 'test_top1': 0.8881, 'test_continuity': 0.9328, 'train_rows': 1290880, 'train_time_s': 49.9578, 'inference_time_s': 0.0352, 'inference_ms_per_obs': 0.0018}
+=== RandomForest
+  fold 0: top1=0.8882 macroF1=0.9312
+  fold 1: top1=0.9004 macroF1=0.9425
+  fold 2: top1=0.9383 macroF1=0.9617
+  fold 3: top1=0.9057 macroF1=0.9463
+  fold 4: top1=0.8750 macroF1=0.9277
+{'model': 'RandomForest', 'family': 'Ensemble (bagging)', 'config': '150 trees, max_depth=18, leaf=5, max_samples=0.3', 'cv_macro_f1': np.float64(0.9419), 'cv_macro_f1_std': np.float64(0.0135), 'cv_top1': np.float64(0.9015), 'cv_top1_std': np.float64(0.0237), 'cv_log_loss': np.float64(0.0733), 'cv_continuity': np.float64(0.9258), 'test_accuracy': 0.9719, 'test_precision': 0.9086, 'test_recall': 0.8809, 'test_f1': 0.8946, 'test_macro_f1': 0.9392, 'test_log_loss': 0.0691, 'test_top1': 0.8951, 'test_continuity': 0.9356, 'train_rows': 1290880, 'train_time_s': 53.7854, 'inference_time_s': 0.2919, 'inference_ms_per_obs': 0.0152}
+=== HistGradientBoosting
+  fold 0: top1=0.8849 macroF1=0.9286
+  fold 1: top1=0.8995 macroF1=0.9418
+  fold 2: top1=0.9358 macroF1=0.9605
+  fold 3: top1=0.9049 macroF1=0.9466
+  fold 4: top1=0.8734 macroF1=0.9257
+{'model': 'HistGradientBoosting', 'family': 'Boosting', 'config': '300 iters, lr=0.1, 31 leaves', 'cv_macro_f1': np.float64(0.9406), 'cv_macro_f1_std': np.float64(0.0141), 'cv_top1': np.float64(0.8997), 'cv_top1_std': np.float64(0.0237), 'cv_log_loss': np.float64(0.0765), 'cv_continuity': np.float64(0.9256), 'test_accuracy': 0.9708, 'test_precision': 0.8933, 'test_recall': 0.8912, 'test_f1': 0.8923, 'test_macro_f1': 0.9377, 'test_log_loss': 0.0739, 'test_top1': 0.8943, 'test_continuity': 0.9343, 'train_rows': 1290880, 'train_time_s': 8.7041, 'inference_time_s': 0.1526, 'inference_ms_per_obs': 0.008}
+=== LightGBM
+  fold 0: top1=0.8850 macroF1=0.9287
+  fold 1: top1=0.9017 macroF1=0.9424
+  fold 2: top1=0.9394 macroF1=0.9623
+  fold 3: top1=0.9065 macroF1=0.9466
+  fold 4: top1=0.8810 macroF1=0.9294
+{'model': 'LightGBM', 'family': 'Boosting', 'config': '400 trees, lr=0.05, 63 leaves, bagging 0.8, colsample 0.8', 'cv_macro_f1': np.float64(0.9419), 'cv_macro_f1_std': np.float64(0.0139), 'cv_top1': np.float64(0.9027), 'cv_top1_std': np.float64(0.0232), 'cv_log_loss': np.float64(0.0747), 'cv_continuity': np.float64(0.9322), 'test_accuracy': 0.972, 'test_precision': 0.9054, 'test_recall': 0.8855, 'test_f1': 0.8954, 'test_macro_f1': 0.9396, 'test_log_loss': 0.0694, 'test_top1': 0.8982, 'test_continuity': 0.9412, 'train_rows': 1290880, 'train_time_s': 12.1132, 'inference_time_s': 0.3639, 'inference_ms_per_obs': 0.019}
+=== MLP
+  fold 0: top1=0.8840 macroF1=0.9248
+  fold 1: top1=0.8930 macroF1=0.9340
+  fold 2: top1=0.9343 macroF1=0.9577
+  fold 3: top1=0.8995 macroF1=0.9363
+  fold 4: top1=0.8768 macroF1=0.9188
+{'model': 'MLP', 'family': 'Neural network', 'config': 'StandardScaler, (64,32) ReLU, Adam lr=1e-3, early stopping, 600k-row subsample', 'cv_macro_f1': np.float64(0.9343), 'cv_macro_f1_std': np.float64(0.0148), 'cv_top1': np.float64(0.8975), 'cv_top1_std': np.float64(0.0223), 'cv_log_loss': np.float64(0.0857), 'cv_continuity': np.float64(0.9317), 'test_accuracy': 0.9682, 'test_precision': 0.8932, 'test_recall': 0.8693, 'test_f1': 0.8811, 'test_macro_f1': 0.9314, 'test_log_loss': 0.078, 'test_top1': 0.8885, 'test_continuity': 0.9427, 'train_rows': 600000, 'train_time_s': 68.1854, 'inference_time_s': 0.0957, 'inference_ms_per_obs': 0.005}

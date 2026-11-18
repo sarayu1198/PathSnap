@@ -8,3 +8,4 @@ artifacts/oof_*.pkl
 artifacts/test_pred_*.pkl
 # raw data is distributed separately (see README)
 data/
+artifacts/models/RandomForest.joblib
