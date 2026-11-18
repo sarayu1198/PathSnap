@@ -174,6 +174,8 @@ Run from the repo root, in this order. Seeds are fixed at 42. Only `train` and `
 | 5. Bayesian optimisation | `python scripts/bayes_opt.py 30` | `results/optuna_trials.csv`, `tuned_vs_untuned.csv`, `artifacts/final_model.joblib` | 30 min |
 | 6. HMM tuning + evaluation | `python scripts/hmm_eval.py LightGBM_tuned` | `artifacts/hmm_params.json`, `results/hmm_*.csv`, `maps/pred_student_test_*.html` | 10 min |
 | 7. Figures | `python scripts/make_plots.py` | `figures/*.png` | 1 min |
+| 8. Training-set metrics (over/underfitting) | `python scripts/train_fit_eval.py` | `results/train_fit_metrics.csv` | 3 min |
+| 9. Train / CV / test summary tables | `python scripts/summary_tables.py` | `results/summary_train_cv_test.{csv,md}` | <1 s |
 
 The large intermediate tables (`artifacts/features_*.pkl`, `oof_*.pkl`, `test_pred_*.pkl`) and `RandomForest.joblib` (116 MB, over GitHub's file limit) are git-ignored. Steps 2–5 regenerate them.
 

@@ -32,7 +32,7 @@ Each requirement from the hackathon documents, and where it lives in this repo. 
 | Folium map (≥1) | `maps/eda_*.html`, `maps/pred_student_test_*.html` |
 | Partition used for each analysis | stated in every figure title / file name |
 | 3.1 Comparison table (CV macro-F1, Top-1, continuity, test macro-F1, log loss, inference time) | `results/model_comparison.csv` |
-| 3.2 Per-model answers (hyperparameters, loss, test metrics, over/underfitting) | configs in `results/experiment_log.json`; fold spread in `results/cv_folds.csv` (CV vs test gap = over/underfitting evidence) |
+| 3.2 Per-model answers (hyperparameters, loss, test metrics, over/underfitting) | configs in `results/experiment_log.json`; fold spread in `results/cv_folds.csv`; train vs CV vs test in `results/summary_train_cv_test.md` (train−CV gap = over/underfitting evidence) |
 | 3.3 CV macro-F1 plot | `figures/cv_macro_f1.png` |
 | Student-test Top-1 + macro-F1 plot | `figures/test_top1_macro_f1.png` |
 | Log loss plot | `figures/test_log_loss.png` |
