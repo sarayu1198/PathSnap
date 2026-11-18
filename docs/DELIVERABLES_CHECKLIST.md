@@ -37,7 +37,7 @@ Each requirement from the hackathon documents, and where it lives in this repo. 
 | Student-test Top-1 + macro-F1 plot | `figures/test_top1_macro_f1.png` |
 | Log loss plot | `figures/test_log_loss.png` |
 | Confusion matrices | `figures/confusion_matrices.png` |
-| Training curves (only epoch-wise models) | `figures/mlp_training_curve.png` (MLP only; tree/linear models have no epoch history, so none are drawn) |
+| Training curves (only epoch-wise models) | `figures/mlp_train_val_loss.png` (train vs validation log loss on held-out trips, from `scripts/mlp_history.py`) and `figures/mlp_training_curve.png` (sklearn early-stopping history). MLP only; tree/linear models have no epoch history, so none are drawn |
 | Plots justifying selection | `figures/cv_top1.png`, `figures/accuracy_vs_speed.png` |
 | 4 Bayesian optimisation (params, ranges, objective, trials, best, tuned vs untuned) | `scripts/bayes_opt.py` (search space), `results/optuna_trials.csv`, `artifacts/best_params.json`, `results/tuned_vs_untuned.csv`, `figures/optuna_history.png`, `figures/tuned_vs_untuned.png` |
 | 5 HMM (states, emission, transition, gaps, disconnected segments, improvement) | docstring of `pathsnap/hmm.py`, `results/hmm_tuning.csv`, `results/hmm_student_test.csv`, `figures/hmm_vs_classifier.png`, `figures/hmm_tuning.png` |
